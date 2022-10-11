@@ -1,14 +1,18 @@
-import {defineStore} from 'pinia'
+import { defineStore } from 'pinia';
 export const useUserStore = defineStore({
   id: 'user',
   state: () => {
     return {
-      name: '张三'
-    }
+      name: '张三',
+      count: 0,
+    };
   },
   actions: {
     updateName(name: string) {
-      this.name = name
-    }
-  }
-})
+      this.name = name;
+    },
+    increment() {
+      this.count++;
+    },
+  },
+});
