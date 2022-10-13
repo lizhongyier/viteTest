@@ -30,6 +30,16 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import('@/pages/VueUse.vue'),
   },
+  {
+    path: '/threeText',
+    name: 'ThreeText',
+    meta: {
+      title: '首页',
+      keepAlive: true,
+      requireAuth: false,
+    },
+    component: () => import('@/pages/ThreeText.vue'),
+  },
 ];
 
 const router = createRouter({
